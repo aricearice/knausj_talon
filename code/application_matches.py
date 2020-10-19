@@ -11,6 +11,12 @@ os: mac
 and app.name: DataGrip
 """
 
+
+apps.term = """
+os: mac
+and app.name: iTerm2
+"""
+
 apps.finder = """
 os: mac
 and app.bundle: com.apple.finder

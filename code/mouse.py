@@ -137,11 +137,11 @@ class Actions:
     def mouse_drag():
         """(TEMPORARY) Press and hold/release button 0 depending on state for dragging"""
         if 1 not in ctrl.mouse_buttons_down():
-            # print("start drag...")
+            print("start drag...")
             ctrl.mouse_click(button=0, down=True)
-            # app.notify("drag started")
+            app.notify("drag started")
         else:
-            # print("end drag...")
+            print("end drag...")
             ctrl.mouse_click(button=0, up=True)
 
         # app.notify("drag stopped")
@@ -256,7 +256,7 @@ def on_pop(active):
 
 
 noise.register("pop", on_pop)
-
+#noise.register("hiss", lambda arg: actions.user.mouse_drag())
 
 def mouse_scroll(amount):
     def scroll():

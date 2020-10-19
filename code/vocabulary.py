@@ -46,7 +46,18 @@ word_map.update({x.lower(): x for x in capitalize})
 
 # Add words (or phrases you want treated as words) here if Talon doesn't
 # recognize them at all.
-simple_vocabulary = ["nmap", "admin", "Cisco", "Citrix", "VPN", "DNS", "minecraft"]
+simple_vocabulary = [
+        "nmap",
+        "admin",
+        "Cisco",
+        "Citrix",
+        "VPN",
+        "DNS",
+        "minecraft",
+        "github",
+        "grep",
+        "apps"
+        ]
 
 # Add vocabulary words (or phrases you want treated as words) here that aren't
 # recognized by Talon and are written differently than they're pronounced.
