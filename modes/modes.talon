@@ -20,10 +20,13 @@ talon mode: speech.enable()
 ^dictation mode$:
     mode.disable("sleep")
     mode.disable("command")
-    mode.enable("dictation")
+    # mode.enable("dictation")
+    key(cmd)
+    key(cmd)
 ^command mode$:
+    key(cmd)
     mode.disable("sleep")
-    mode.disable("dictation")
+    # mode.disable("dictation")
     mode.enable("command")
 [enable] debug mode:
     mode.enable("user.gdb")
