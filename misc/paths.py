@@ -32,18 +32,6 @@ ctx.lists["user.paths_public"] = {
 
 ctx.lists["user.paths_private"] = {}
 
-# XXX - add support for selecting
-windows_paths = {
-    "desktop": "%USERPROFILE%\\Desktop",
-    "profile": "%USERPROFILE%",
-    "root": "%SYSTEMROOT%",
-    "windows": "%SYSTEMROOT%",
-    "system": "%SYSTEMROOT%\\System32",
-    "drivers": "%SYSTEMROOT%\\System32\\Drivers",
-    "programs": "%PROGRAMFILES%",
-}
-
-
 @ctx.capture(rule="{user.paths_public}")
 def paths_public(m):
     return m.paths_public

@@ -198,3 +198,11 @@ swipe [<user.text>] [over]:
     key("right")
     insert(", ")
     insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+inside stretchy (bracket | braces): 
+	insert("{") 
+        key(enter)
+        key(enter)
+        insert("}") 
+	key(up)
+empty parens:
+	insert("()")

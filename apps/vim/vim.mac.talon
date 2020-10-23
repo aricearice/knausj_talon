@@ -9,25 +9,38 @@ unfold all:
     key(z)
     key(shift-r)
 go to top:
+    key(escape)
     key(g)
     key(g)
 go to bottom:
+    key(escape)
     key(shift-g)
     key(shift-g)
 go to screen top:
+    key(escape)
     key(shift-h)
 go to screen bottom:
+    key(escape)
     key(shift-l)
 go to screen middle:
+    key(escape)
     key(shift-m)
+go to line:
+    key(escape)
+    ":"
+
 go line begin:
+    key(escape)
     key(^)
 select block:
+    key(escape)
     key(ctrl-v)
 right to file:
+    key(escape)
     insert(":w")
     key(enter)
 quit this file:
+    key(escape)
     insert(":q")
     key(enter)
 force quit this file:
@@ -59,12 +72,13 @@ search bounded:
     key(left)
     key(left)
 replace things:
-    insert(":/")
-change <number_small> words|word:
+    insert(":%s/")
+change <number_small> (words|word):
     key(c)
     insert("{number_small}")
     key(w)
 change current line:
+    key(escape)
     key(c)
     key(c)
 join lines:
@@ -72,33 +86,34 @@ join lines:
 
 # window pain management
 splitter file vertically:
-    key(esc)
+    key(escape)
     insert(":vsplit")
 
 splitter file horizontally:
-    key(esc)
+    key(escape)
+    key(escape)
     insert(":split")
 splitter vertically:
-    key(esc)
+    key(escape)
     insert(":vsplit")
     key(enter)
 
 splitter horizontally:
-    key(esc)
+    key(escape)
     insert(":split")
     key(enter)
 pain equally:
-    key(esc)
+    key(escape)
     key(ctrl-w)
     key(=)
 window pain:
-    key(esc)
+    key(escape)
     key(ctrl-w)
 toggle last window:
-    key(esc)
+    key(escape)
     insert("gT")
 toggle next window:
-    key(esc)
+    key(escape)
     insert("gt")
 open nerd file:
     key(o)
@@ -107,21 +122,23 @@ open nerd file hurry:
 open nerd file verdi:
     key(s)
 crappy up <number_small>:
+    key(escape)
     key(shift-v)
     key(k)
     repeat(number_small - 1)
     key(y)
 
 crappy next <number_small>:
+    key(escape)
     key(shift-v)
     key(j)
     repeat(number_small - 1)
     key(y)
 redo that:
-    key(esc)
+    key(escape)
     key(ctrl-r)
 undo that:
-    key(esc)
+    key(escape)
     key(u)
 toggle nerdtree:
         key(ctrl-n)
@@ -152,6 +169,7 @@ easy <number_small> down:
     repeat(number_small - 1)
 
 delete line:
+    key(escape)
     key(d)
     key(d)
 

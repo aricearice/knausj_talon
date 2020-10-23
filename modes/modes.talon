@@ -18,11 +18,11 @@ talon wake: speech.enable()
 dragon mode: speech.disable()
 talon mode: speech.enable()
 ^dictation mode$:
+    key(cmd)
+    key(cmd)
     mode.disable("sleep")
     mode.disable("command")
     # mode.enable("dictation")
-    key(cmd)
-    key(cmd)
 ^command mode$:
     key(cmd)
     mode.disable("sleep")
