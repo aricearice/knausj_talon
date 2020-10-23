@@ -96,23 +96,6 @@ fuzzy find file:
     key("left")
     key("left")
 
-# grepping
-
-rip: "rg -i "
-rip around: "rg -B2 -A2 -i "
-rip (exact|precise): "rg "
-now rip:
-    edit.up()
-    insert("| rg -i ")
-
-# even though rip is arguably better, we still want grep for remote terminals,
-# etc
-grep: "grep -i "
-grep around: "grep -B2 -A2 -i "
-now grep:
-    edit.up()
-    insert("| grep -i ")
-
 # networking
 show (I P|eye pee): "ip addr\n"
 show route: "ip route\n"
@@ -122,18 +105,6 @@ net cat listener: "nc -v -l -p "
 show hosts file: "cat /etc/hosts\n"
 edit hosts file: "sudo vi /etc/hosts\n"
 tcp dump: "tcpdump "
-
-generate see tags: "ctags --recurse *\n"
-generate see scope database:
-    insert('find . -name "*.c"')
-    insert(' -o -name "*.cpp"')
-    insert(' -o -name "*.h"')
-    insert(' -o -name "*.hpp"')
-    insert(' -o -name "*.py"')
-    insert(' -o -name "*.s"')
-    insert(' -o -name "*.asm"')
-    insert('> cscope.files\n')
-    insert("cscope -q -R -b -i cscope.files\n")
 
 pee grep: "pgrep "
 pee kill: "pkill "

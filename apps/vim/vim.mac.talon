@@ -169,7 +169,6 @@ easy <number_small> down:
     repeat(number_small - 1)
 
 delete line:
-    key(escape)
     key(d)
     key(d)
 
