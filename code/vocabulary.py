@@ -52,12 +52,17 @@ simple_vocabulary = [
         "DNS",
         "github",
         "grep",
-        "apps"
+        "apps",
+        "app",
+        "lol",
+        "cocon",
+        "wampa"
         ]
 
 # Add vocabulary words (or phrases you want treated as words) here that aren't
 # recognized by Talon and are written differently than they're pronounced.
 mapping_vocabulary = {
+        "el oh el": "lol"
     # For example:
     # "enn map": "nmap",
     # "under documented": "under-documented",

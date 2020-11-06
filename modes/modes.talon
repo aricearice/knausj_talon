@@ -18,15 +18,22 @@ talon wake: speech.enable()
 dragon mode: speech.disable()
 talon mode: speech.enable()
 ^dictation mode$:
-    key(cmd)
-    key(cmd)
     mode.disable("sleep")
     mode.disable("command")
-    # mode.enable("dictation")
-^command mode$:
+    mode.enable("dictation")
+^mac voice mode$:
+    key(cmd cmd)
+    #sleep(50ms)
+    mode.disable("dictation")
+    mode.disable("command")
+    speech.disable()
+^cancel voice mode$:
     key(cmd)
+^accessibility mode$:
+    key(cmd-alt-f5)
+^command mode$:
     mode.disable("sleep")
-    # mode.disable("dictation")
+    mode.disable("dictation")
     mode.enable("command")
 [enable] debug mode:
     mode.enable("user.gdb")
